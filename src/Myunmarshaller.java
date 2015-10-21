@@ -7,7 +7,8 @@ import model.Person;
 import dao.Storage;
 import model.HealthProfile;
 
-public class Myunmarshaller {  	
+public class Myunmarshaller 
+{  	
 	public static Storage people = new Storage();
 
 	public static void main(String[] args) throws Exception
@@ -17,8 +18,6 @@ public class Myunmarshaller {
 		
 		/* Sets up the unmarshaller and extrapolates the data */
 		JAXBContext jc = JAXBContext.newInstance(Storage.class);
-        System.out.println();
-        System.out.println("Here's the data we got from the XML file: ");
         Unmarshaller um = jc.createUnmarshaller();
         Storage people = (Storage) um.unmarshal(new FileReader(filein));
         List<Person> list = people.getData();
@@ -35,6 +34,7 @@ public class Myunmarshaller {
         	System.out.println("\t\tHeight: " + hp.getHeight());
         	System.out.println("\t\tWeight: " + hp.getWeight());
         	System.out.println("\t\tBMI: " + hp.getBMI());
+            System.out.println();
         }
     }
 }

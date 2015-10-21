@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <people>
   <person id="0001">
-        <firstname>George R. R.</firstname>
-        <lastname>Martin</lastname>
-        <birthdate>1984-09-20T18:00:00.000+02:00</birthdate>
+        <firstname>Andrea</firstname>
+        <lastname>Orler</lastname>
+        <birthdate>1993-05-21T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>90</weight>
             <height>1.70</height>
             <bmi>31.14</bmi>
@@ -16,7 +16,7 @@
         <lastname>Bof</lastname>
         <birthdate>1993-08-07T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>80</weight>
             <height>1.80</height>
             <bmi>24.69</bmi>
@@ -27,7 +27,7 @@
         <lastname>Darrec</lastname>
         <birthdate>1993-09-15T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>70</weight>
             <height>1.85</height>
             <bmi>20.45</bmi>
@@ -38,18 +38,18 @@
         <lastname>Orla</lastname>
         <birthdate>1993-05-14T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>80</weight>
             <height>1.75</height>
             <bmi>26.12</bmi>
         </healthprofile>
     </person>
     <person id="0005">
-        <firstname>Francesco</firstname>
-        <lastname>Berna</lastname>
+        <firstname>Дарья</firstname>
+        <lastname>Бурханова</lastname>
         <birthdate>1992-07-13T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>72</weight>
             <height>1.70</height>
             <bmi>24.91</bmi>
@@ -57,10 +57,10 @@
     </person>
     <person id="0006">
         <firstname>Lorenzo</firstname>
-        <lastname>Riga</lastname>
+        <lastname>Rigato</lastname>
         <birthdate>1991-01-28T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>75</weight>
             <height>1.80</height>
             <bmi>23.15</bmi>
@@ -68,10 +68,10 @@
     </person>
     <person id="0007">
         <firstname>Mattia</firstname>
-        <lastname>Torrezan</lastname>
+        <lastname>Torresan</lastname>
         <birthdate>1990-11-08T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>95</weight>
             <height>1.92</height>
             <bmi>25.77</bmi>
@@ -82,7 +82,7 @@
         <lastname>Boof</lastname>
         <birthdate>1968-09-05T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>80</weight>
             <height>1.80</height>
             <bmi>24.69</bmi>
@@ -93,7 +93,7 @@
         <lastname>Dinca</lastname>
         <birthdate>1972-07-10T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>62</weight>
             <height>1.69</height>
             <bmi>21.71</bmi>
@@ -104,7 +104,7 @@
         <lastname>Minela</lastname>
         <birthdate>1993-10-28T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>65</weight>
             <height>1.75</height>
             <bmi>21.22</bmi>
@@ -112,112 +112,112 @@
     </person>
     <person id="0011">
         <firstname>Arianna</firstname>
-        <lastname>Bene</lastname>
-        <birthdate>1993-05-22T18:00:00.000+02:00</birthdate>
+        <lastname>Taufer</lastname>
+        <birthdate>1996-05-11T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
             <weight>62</weight>
             <height>1.70</height>
             <bmi>21.45</bmi>
         </healthprofile>
     </person>
     <person id="0012">
-        <firstname>Riccardo</firstname>
-        <lastname>Costa</lastname>
-        <birthdate>1993-02-25T18:00:00.000+02:00</birthdate>
+        <firstname>Mattia</firstname>
+        <lastname>Busnardo</lastname>
+        <birthdate>1993-11-11T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>95</weight>
-            <height>1.65</height>
-            <bmi>34.89</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>82</weight>
+            <height>1.75</height>
+            <bmi>26.78</bmi>
         </healthprofile>
     </person>
     <person id="0013">
-        <firstname>Nicola</firstname>
-        <lastname>Simionato</lastname>
-        <birthdate>1993-12-15T18:00:00.000+02:00</birthdate>
+        <firstname>Александра</firstname>
+        <lastname>Почиталина</lastname>
+        <birthdate>1994-04-24T18:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>75</weight>
-            <height>1.90</height>
-            <bmi>20.78</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>58</weight>
+            <height>1.62</height>
+            <bmi>22.10</bmi>
         </healthprofile>
     </person>
     <person id="0014">
-        <firstname>Fabio</firstname>
-        <lastname>Zotto</lastname>
-        <birthdate>1990-11-01T18:00:00.000+02:00</birthdate>
+        <firstname>Elisa</firstname>
+        <lastname>Lucian</lastname>
+        <birthdate>1996-06-28T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>85</weight>
-            <height>1.85</height>
-            <bmi>24.84</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>98</weight>
+            <height>1.92</height>
+            <bmi>26.58</bmi>
         </healthprofile>
     </person>
     <person id="0015">
-        <firstname>Andrea</firstname>
-        <lastname>Daminni</lastname>
-        <birthdate>1989-09-09T18:00:00.000+02:00</birthdate>
+        <firstname>Francesca</firstname>
+        <lastname>Bettega</lastname>
+        <birthdate>1996-05-28T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>75</weight>
-            <height>1.85</height>
-            <bmi>21.91</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>65</weight>
+            <height>1.65</height>
+            <bmi>23.88</bmi>
         </healthprofile>
     </person>
     <person id="0016">
-        <firstname>Nicola</firstname>
-        <lastname>Carmine</lastname>
-        <birthdate>1989-05-22T18:00:00.000+02:00</birthdate>
+        <firstname>Elia</firstname>
+        <lastname>Callegaro</lastname>
+        <birthdate>1993-01-01T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>85</weight>
-            <height>1.75</height>
-            <bmi>27.76</bmi>
+           	<lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>79</weight>
+            <height>1.85</height>
+            <bmi>23.08</bmi>
         </healthprofile>
     </person>
     <person id="0017">
-        <firstname>Mattia</firstname>
-        <lastname>Mene</lastname>
-        <birthdate>1989-10-09T18:00:00.000+02:00</birthdate>
+        <firstname>Alessandro</firstname>
+        <lastname>Baggio</lastname>
+        <birthdate>1993-06-16T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>70</weight>
-            <height>1.85</height>
-            <bmi>20.45</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>92</weight>
+            <height>1.76</height>
+            <bmi>29.70</bmi>
         </healthprofile>
     </person>
     <person id="0018">
-        <firstname>Marco</firstname>
-        <lastname>Zanna</lastname>
-        <birthdate>1988-01-05T18:00:00.000+02:00</birthdate>
+        <firstname>Alex</firstname>
+        <lastname>Bernardin</lastname>
+        <birthdate>1996-02-04T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>80</weight>
-            <height>1.95</height>
-            <bmi>21.04</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>69</weight>
+            <height>1.83</height>
+            <bmi>20.60</bmi>
         </healthprofile>
     </person>
     <person id="0019">
-        <firstname>Michele</firstname>
-        <lastname>Mao</lastname>
-        <birthdate>1985-07-15T18:00:00.000+02:00</birthdate>
+        <firstname>Emanuele</firstname>
+        <lastname>Frison</lastname>
+        <birthdate>1996-06-21T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>60</weight>
-            <height>1.70</height>
-            <bmi>20.76</bmi>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>76</weight>
+            <height>1.74</height>
+            <bmi>25.10</bmi>
         </healthprofile>
     </person>
     <person id="0020">
-        <firstname>Nicola</firstname>
-        <lastname>Sacco</lastname>
-        <birthdate>1992-06-11T18:00:00.000+02:00</birthdate>
+        <firstname>Francesca</firstname>
+        <lastname>Taufer</lastname>
+        <birthdate>1996-05-17T00:00:00.000+02:00</birthdate>
         <healthprofile>
-            <lastupdate>2014-09-20T18:00:00.000+02:00</lastupdate>
-            <weight>90</weight>
+            <lastupdate>2015-10-21T23:00:00.000+02:00</lastupdate>
+            <weight>71</weight>
             <height>1.85</height>
-            <bmi>26.30</bmi>
+            <bmi>20.74</bmi>
         </healthprofile>
     </person>
 

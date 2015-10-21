@@ -15,7 +15,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class XpathGetter 
-
 {
 	Document doc;
     XPath xpath;
@@ -39,44 +38,76 @@ public class XpathGetter
         return xpath;
     }
     
-    /* XPath returning the whole list of people */
-    public NodeList getAllPeople() throws XPathExpressionException
+    /* XPath returning the whole list of people IDs */
+    public NodeList getAllIDs() throws XPathExpressionException
     {
-    	XPathExpression expr = xpath.compile("//person");
-    	NodeList people = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
-        return people;
+    	XPathExpression expr = xpath.compile("//person/@id");
+    	NodeList ids = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+        return ids;
     }
     
-    /* XPath returning the list of people having the required condition on weight */
+    /* XPath returning the list of IDs of people having the required condition on weight */
     public NodeList getByWeight(double weight, char operator) throws XPathExpressionException
     {
-    	XPathExpression expr = xpath.compile("//person[healthprofile/weight"+ operator + weight +"]");
-    	NodeList people = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
-        return people;
+    	XPathExpression expr = xpath.compile("//person[healthprofile/weight"+ operator + weight +"]/@id");
+    	NodeList ids = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+        return ids;
     }
     
-    /* Gets the weight of a person given its first name and last name */
-    public Node getWeight(String firstName, String lastName) throws XPathExpressionException
+    /* Gets the weight of a person given its ID */
+    public double getWeight(String id) throws XPathExpressionException
     {
-    	XPathExpression expr = xpath.compile("/people/person[firstname='" + firstName + "'][lastname='" + lastName + "']/healthprofile/weight/text()");
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/healthprofile/weight/text()");
     	Node weight = (Node) expr.evaluate(doc, XPathConstants.NODE);
-    	return weight;
+    	return Double.parseDouble(weight.getTextContent());
     }
 
-    /* Gets the height of a person given its first name and last name */
-    public Node getHeight(String firstName, String lastName) throws XPathExpressionException
+    /* Gets the height of a person given its ID */
+    public double getHeight(String id) throws XPathExpressionException
     {
-    	XPathExpression expr = xpath.compile("/people/person[firstname='" + firstName + "'][lastname='" + lastName + "']/healthprofile/height/text()");
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/healthprofile/height/text()");
     	Node height = (Node) expr.evaluate(doc, XPathConstants.NODE);
-    	return height;
+    	return Double.parseDouble(height.getTextContent());
+    }
+
+    /* Gets the birthdate of a person given its ID */
+    public String getBirthdate(String id) throws XPathExpressionException
+    {
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/birthdate/text()");
+    	Node birthdate = (Node) expr.evaluate(doc, XPathConstants.NODE);
+    	return birthdate.getTextContent();
+    }
+
+    /* Gets the birthdate of a person given its ID */
+    public String getFirstname(String id) throws XPathExpressionException
+    {
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/firstname/text()");
+    	Node firstname = (Node) expr.evaluate(doc, XPathConstants.NODE);
+    	return firstname.getTextContent();
+    }
+
+    /* Gets the birthdate of a person given its ID */
+    public String getLastname(String id) throws XPathExpressionException
+    {
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/lastname/text()");
+    	Node lastname = (Node) expr.evaluate(doc, XPathConstants.NODE);
+    	return lastname.getTextContent();
     }
     
-    /* Gets the health profile of a person given its ID */
-    public Node getHP(String id) throws XPathExpressionException
+    /* Gets the date of last update of a person's health profile given its ID */
+    public String getLastupdate(String id) throws XPathExpressionException
     {
-    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/healthprofile");
-    	Node hp = (Node) expr.evaluate(doc, XPathConstants.NODE);
-    	return hp;
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/healthprofile/lastupdate/text()");
+    	Node lastupdate = (Node) expr.evaluate(doc, XPathConstants.NODE);
+    	return lastupdate.getTextContent();
+    }
+
+    /* Gets the BMI of a person given its ID */
+    public double getBMI(String id) throws XPathExpressionException
+    {
+    	XPathExpression expr = xpath.compile("//person[@id='" + id + "']/healthprofile/bmi/text()");
+    	Node bmi = (Node) expr.evaluate(doc, XPathConstants.NODE);
+    	return Double.parseDouble(bmi.getTextContent());
     }
 
   
@@ -87,7 +118,7 @@ public class XpathGetter
 		
 		int argCount = args.length;
 		
-		if (argCount < 1 || argCount > 3) 
+		if (argCount < 1 || argCount > 3) // 0 or more than 3 arguments --> error!
 		{
 			System.out.println("Arguments not valid");
 		} 
@@ -99,10 +130,32 @@ public class XpathGetter
 			{
 				if (method.equals("listAll"))
 				{
-					NodeList people = hpr.getAllPeople();
-					for(int i=0; i < people.getLength(); i++)
+					String id, firstname, lastname, birthdate;
+					double weight, height, bmi;
+
+					NodeList ids = hpr.getAllIDs();
+					for(int i=0; i < ids.getLength(); i++)
 					{
-						System.out.println(people.item(i).getTextContent());
+						/* Retrieves ID by ID */
+						id = ids.item(i).getTextContent();
+						
+						/* Retrieves all the info of the particular person to be output */
+						firstname = hpr.getFirstname(id);
+						lastname = hpr.getLastname(id);
+						birthdate = hpr.getBirthdate(id);
+						weight = hpr.getWeight(id);
+						height = hpr.getHeight(id);
+						bmi = hpr.getBMI(id);
+						
+						/* Prints all the infos formatted */
+						System.out.println("Person " + id +  ":");
+			        	System.out.println("\tName: " + firstname);
+			        	System.out.println("\tSurname: " + lastname);
+			        	System.out.println("\tBirthdate: " + birthdate);
+			        	System.out.println("\tHeight: " + height);
+			        	System.out.println("\tWeight: " + weight);
+			        	System.out.println("\tBMI: " + bmi);
+			        	System.out.println();
 					}
 				}
 				else
@@ -122,16 +175,13 @@ public class XpathGetter
 					}
 					else 
 					{
-						Node hp = hpr.getHP(id);
-
-						if (hp == null)		// The ID didn't match with anybody in the XML
-						{
-							System.out.println("ID not valid!");
-						}
-						else
-						{
-							System.out.println(hp.getTextContent());
-						}
+						/* Prints the data */
+						System.out.println(hpr.getFirstname(id) + " " + hpr.getLastname(id) +"'s Health Profile:");
+				        System.out.println("\tHeight: " + hpr.getHeight(id));
+				        System.out.println("\tWeight: " + hpr.getWeight(id));
+				        System.out.println("\tBMI: " + hpr.getBMI(id));
+				        System.out.println("Last updated on " + hpr.getLastupdate(id));
+				        System.out.println();
 					}
 				}
 				
@@ -145,13 +195,25 @@ public class XpathGetter
 			{
 				if (method.equals("getByWeight")) 
 				{
-					double weight = Double.parseDouble(args[1]);	// Parses the string passed as argument to a double
-					char operator = args[2].charAt(0);				// Parses the string passed as argument to a char
-					NodeList people = hpr.getByWeight(weight, operator);	// Gets the list
-
-					for(int i=0; i < people.getLength(); i++)		// Prints every person in the list
-					{
-						System.out.println(people.item(i).getTextContent());
+					double weight = Double.parseDouble(args[1]);		// Parses the string passed as argument to a double
+					char operator = args[2].charAt(0);					// Parses the string passed as argument to a char
+					NodeList ids = hpr.getByWeight(weight, operator);	// Gets the list
+					
+					String ID, nome, cognome, lastupdate;
+					double peso, altezza, bMi;
+					
+					for(int i=0; i < ids.getLength(); i++)		// Prints every person in the list
+					{	
+						/* Retrieves ID by ID */
+						ID = ids.item(i).getTextContent();
+						
+						/* Retrieves all the info of the particular person to be output */
+						nome = hpr.getFirstname(ID);
+						cognome = hpr.getLastname(ID);
+						peso = hpr.getWeight(ID);
+						
+						/* Prints the infos */
+			        	System.out.println(nome + " " + cognome +" weights " + peso + " kg");
 					}
 				}
 				else 

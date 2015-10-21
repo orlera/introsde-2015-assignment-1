@@ -126,7 +126,7 @@
 		<echo message="Running instruction 2: Print the health profile of the person with ID = 5..." />
 		<java classname="XpathGetter" classpath="${build.dir}">
 			<arg value="getHP"/>
-			<arg value="0002"/>
+			<arg value="0005"/>
 		</java>
 	</target>
 	
