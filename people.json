@@ -1,0 +1,36 @@
+{
+  "person" : [ {
+    "firstname" : "Nome",
+    "lastname" : "Cognome",
+    "birthdate" : "2008-05-12T00:00:00.000+02:00",
+    "healthprofile" : {
+      "lastupdate" : "2015-10-21T17:23:12.786+02:00",
+      "weight" : 80.0,
+      "height" : 1.8,
+      "bmi" : 24.69
+    },
+    "id" : "9147"
+  }, {
+    "firstname" : "Fulano",
+    "lastname" : "De Tal",
+    "birthdate" : "1984-06-21T00:00:00.000+02:00",
+    "healthprofile" : {
+      "lastupdate" : "2015-10-21T17:23:12.818+02:00",
+      "weight" : 80.0,
+      "height" : 1.8,
+      "bmi" : 24.69
+    },
+    "id" : "0001"
+  }, {
+    "firstname" : "Jane",
+    "lastname" : "Doe",
+    "birthdate" : "1985-03-20T00:00:00.000+01:00",
+    "healthprofile" : {
+      "lastupdate" : "2015-10-21T17:23:12.818+02:00",
+      "weight" : 68.0,
+      "height" : 1.72,
+      "bmi" : 22.99
+    },
+    "id" : "0001"
+  } ]
+}
