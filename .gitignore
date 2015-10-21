@@ -1,8 +1,8 @@
-build
-lib
-ivy
-bin
-*.json
+/bin/
+
+/build/
+/ivy/
+/lib/
 .project
 .classpath
-
+.gitignore
